@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignite Math - Unlock Your Math Potential with AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* slate-900 */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #c084fc, #f472b6); /* blue-400, purple-400, pink-400 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 1.5rem;
+            }
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.5); /* slate-800 with opacity */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(51, 65, 85, 0.5); /* slate-700 with opacity */
+        }
+    </style>
+</head>
+<body class="text-slate-300">
+
+    <!-- Header -->
+    <header id="header" class="bg-slate-900/70 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-slate-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-br from-purple-500 to-blue-500 p-2 rounded-lg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white">
+                           <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                           <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                           <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-bold text-white">Ignite Math</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#features" class="text-slate-400 hover:text-white transition-colors">Features</a>
+                    <a href="#how-it-works" class="text-slate-400 hover:text-white transition-colors">How It Works</a>
+                    <a href="#for-everyone" class="text-slate-400 hover:text-white transition-colors">Who It's For</a>
+                    <a href="#pricing" class="text-slate-400 hover:text-white transition-colors">Pricing</a>
+                    <a href="#faq" class="text-slate-400 hover:text-white transition-colors">FAQ</a>
+                </nav>
+
+                <!-- Call to Action & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <a href="#pricing" class="hidden sm:inline-block bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-600 transition-all shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/30">Get Started</a>
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-slate-400 hover:bg-slate-800 focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900/95 backdrop-blur-sm">
+            <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">Features</a>
+                <a href="#how-it-works" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">How It Works</a>
+                <a href="#for-everyone" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">Who It's For</a>
+                <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">Pricing</a>
+                <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="hero" class="relative overflow-hidden">
+             <div class="absolute inset-0 -z-10">
+                <div class="absolute inset-0 bg-slate-900"></div>
+                <div class="absolute inset-x-0 top-0 h-[800px] bg-[radial-gradient(100%_40%_at_50%_0%,rgba(96,165,250,0.15),rgba(15,23,42,0))]"></div>
+            </div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 section-padding text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight md:leading-snug">
+                    Unlock Your Full <span class="gradient-text">Math Potential</span> with AI
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-slate-400">
+                    Stop struggling with one-size-fits-all lessons. Ignite Math creates a unique learning path just for you, turning confusion into confidence.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#pricing" class="w-full sm:w-auto bg-blue-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 text-lg">
+                        Start Your Free Trial
+                    </a>
+                    <a href="#how-it-works" class="w-full sm:w-auto bg-slate-800 text-white font-semibold px-8 py-4 rounded-lg hover:bg-slate-700 transition-all shadow-lg border border-slate-700 hover:shadow-xl text-lg">
+                        See How It Works
+                    </a>
+                </div>
+                <div class="mt-16">
+                    <img src="https://placehold.co/1000x500/1E293B/94A3B8?text=Ignite+Math+Dashboard" alt="Ignite Math Dashboard" class="rounded-2xl shadow-2xl shadow-purple-500/10 mx-auto ring-1 ring-slate-700"
+                    onerror="this.onerror=null;this.src='https://placehold.co/1000x500/1E293B/94A3B8?text=App+Preview+Unavailable';">
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Bar -->
+        <div class="bg-slate-900/50 py-8">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-center text-sm font-semibold text-slate-500 uppercase tracking-wider">Trusted by students and educators worldwide</h3>
+                <div class="mt-6 grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5 opacity-60">
+                    <div class="col-span-1 flex justify-center"><img class="h-10" src="https://placehold.co/158x48/475569/94A3B8?text=EduVerse" alt="EduVerse"></div>
+                    <div class="col-span-1 flex justify-center"><img class="h-10" src="https://placehold.co/158x48/475569/94A3B8?text=LearnSphere" alt="LearnSphere"></div>
+                    <div class="col-span-1 flex justify-center"><img class="h-10" src="https://placehold.co/158x48/475569/94A3B8?text=Global+Tutor" alt="Global Tutor"></div>
+                    <div class="col-span-1 flex justify-center"><img class="h-10" src="https://placehold.co/158x48/475569/94A3B8?text=Academy+Weekly" alt="Academy Weekly"></div>
+                    <div class="col-span-1 hidden lg:flex justify-center"><img class="h-10" src="https://placehold.co/158x48/475569/94A3B8?text=Parent's+Choice" alt="Parent's Choice"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section id="features" class="section-padding bg-slate-800/30">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-base font-semibold text-purple-400 uppercase tracking-wide">The Future of Learning</h2>
+                    <p class="mt-2 text-3xl md:text-4xl font-extrabold text-white tracking-tight">Everything you need to master math.</p>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-400">
+                        Our platform is packed with powerful features designed to make learning effective, engaging, and fun.
+                    </p>
+                </div>
+
+                <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Feature 1 -->
+                    <div class="glass-card p-8 rounded-2xl hover:border-purple-400/50 transition-all">
+                        <div class="bg-purple-900/50 text-purple-400 rounded-lg w-12 h-12 flex items-center justify-center"><i data-lucide="git-branch-plus"></i></div>
+                        <h3 class="mt-6 text-xl font-bold text-white">Personalized Learning Paths</h3>
+                        <p class="mt-2 text-slate-400">Our AI analyzes your skills to create a unique curriculum that adapts in real-time, focusing on exactly what you need to learn next.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="glass-card p-8 rounded-2xl hover:border-green-400/50 transition-all">
+                        <div class="bg-green-900/50 text-green-400 rounded-lg w-12 h-12 flex items-center justify-center"><i data-lucide="puzzle"></i></div>
+                        <h3 class="mt-6 text-xl font-bold text-white">Interactive Problem Solving</h3>
+                        <p class="mt-2 text-slate-400">Move beyond static text. Solve problems in an interactive environment with instant, intelligent feedback that guides you to the solution.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="glass-card p-8 rounded-2xl hover:border-blue-400/50 transition-all">
+                        <div class="bg-blue-900/50 text-blue-400 rounded-lg w-12 h-12 flex items-center justify-center"><i data-lucide="step-forward"></i></div>
+                        <h3 class="mt-6 text-xl font-bold text-white">Step-by-Step Explanations</h3>
+                        <p class="mt-2 text-slate-400">Never feel lost. Get clear, detailed breakdowns for every single problem, helping you understand the logic, not just memorize the answer.</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="glass-card p-8 rounded-2xl hover:border-yellow-400/50 transition-all">
+                        <div class="bg-yellow-900/50 text-yellow-400 rounded-lg w-12 h-12 flex items-center justify-center"><i data-lucide="lightbulb"></i></div>
+                        <h3 class="mt-6 text-xl font-bold text-white">Real-World Scenarios</h3>
+                        <p class="mt-2 text-slate-400">Connect math to the world around you. Explore how concepts apply to coding, finance, science, and more, making learning more meaningful.</p>
+                    </div>
+                    <!-- Feature 5 -->
+                    <div class="glass-card p-8 rounded-2xl hover:border-pink-400/50 transition-all">
+                        <div class="bg-pink-900/50 text-pink-400 rounded-lg w-12 h-12 flex items-center justify-center"><i data-lucide="bar-chart-3"></i></div>
+                        <h3 class="mt-6 text-xl font-bold text-white">Progress Analytics</h3>
+                        <p class="mt-2 text-slate-400">Visualize your growth with a comprehensive dashboard. Track mastery, identify areas for improvement, and stay motivated on your journey.</p>
+                    </div>
+                    <!-- Feature 6 -->
+                    <div class="glass-card p-8 rounded-2xl hover:border-indigo-400/50 transition-all">
+                        <div class="bg-indigo-900/50 text-indigo-400 rounded-lg w-12 h-12 flex items-center justify-center"><i data-lucide="bot"></i></div>
+                        <h3 class="mt-6 text-xl font-bold text-white">24/7 AI Tutor</h3>
+                        <p class="mt-2 text-slate-400">Your AI-powered tutor is always available. Get help with homework, prepare for tests, or explore new topics anytime, anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="section-padding">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-base font-semibold text-purple-400 uppercase tracking-wide">Simple & Effective</h2>
+                    <p class="mt-2 text-3xl md:text-4xl font-extrabold text-white tracking-tight">Get started in minutes.</p>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-400">
+                        We've designed a straightforward process to get you on the path to math mastery as quickly as possible.
+                    </p>
+                </div>
+                <div class="mt-16 relative">
+                    <div class="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 border-t-2 border-dashed border-slate-700 -translate-y-1/2"></div>
+                    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4 relative">
+                        <!-- Step 1 -->
+                        <div class="text-center">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto bg-slate-800 border-2 border-purple-500 rounded-full text-3xl font-bold text-purple-400 shadow-lg shadow-purple-500/10">1</div>
+                            <h3 class="mt-6 text-xl font-bold text-white">Take an Assessment</h3>
+                            <p class="mt-2 text-slate-400">Start with a quick, adaptive quiz that pinpoints your current knowledge and skill gaps.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="text-center">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto bg-slate-800 border-2 border-purple-500 rounded-full text-3xl font-bold text-purple-400 shadow-lg shadow-purple-500/10">2</div>
+                            <h3 class="mt-6 text-xl font-bold text-white">Get Your Custom Plan</h3>
+                            <p class="mt-2 text-slate-400">Our AI instantly generates a personalized learning roadmap designed for your success.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="text-center">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto bg-slate-800 border-2 border-purple-500 rounded-full text-3xl font-bold text-purple-400 shadow-lg shadow-purple-500/10">3</div>
+                            <h3 class="mt-6 text-xl font-bold text-white">Learn & Master</h3>
+                            <p class="mt-2 text-slate-400">Engage with interactive lessons, solve problems, and build lasting understanding.</p>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="text-center">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto bg-slate-800 border-2 border-purple-500 rounded-full text-3xl font-bold text-purple-400 shadow-lg shadow-purple-500/10">4</div>
+                            <h3 class="mt-6 text-xl font-bold text-white">Track Your Growth</h3>
+                            <p class="mt-2 text-slate-400">Watch your confidence and skills grow through our intuitive progress dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Who It's For Section -->
+        <section id="for-everyone" class="section-padding bg-slate-800/30">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Designed for Every Learner</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-400">
+                        Whether you're a student, parent, or teacher, Ignite Math provides the tools you need to succeed.
+                    </p>
+                </div>
+                <div class="mt-16 grid gap-8 lg:grid-cols-3">
+                    <!-- For Students -->
+                    <div class="glass-card p-8 rounded-2xl text-center">
+                        <div class="bg-blue-900/50 text-blue-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto"><i data-lucide="user" class="w-8 h-8"></i></div>
+                        <h3 class="mt-6 text-2xl font-bold text-white">For Students</h3>
+                        <p class="mt-4 text-slate-400">Build confidence and master concepts at your own pace. Turn math anxiety into a feeling of accomplishment with a learning path made just for you.</p>
+                    </div>
+                    <!-- For Parents -->
+                    <div class="glass-card p-8 rounded-2xl text-center">
+                        <div class="bg-green-900/50 text-green-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto"><i data-lucide="users" class="w-8 h-8"></i></div>
+                        <h3 class="mt-6 text-2xl font-bold text-white">For Parents</h3>
+                        <p class="mt-4 text-slate-400">Empower your child with the best support. Track their progress, understand their challenges, and celebrate their victories every step of the way.</p>
+                    </div>
+                    <!-- For Teachers -->
+                    <div class="glass-card p-8 rounded-2xl text-center">
+                        <div class="bg-purple-900/50 text-purple-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto"><i data-lucide="school" class="w-8 h-8"></i></div>
+                        <h3 class="mt-6 text-2xl font-bold text-white">For Teachers</h3>
+                        <p class="mt-4 text-slate-400">Differentiate instruction effortlessly. Use our data-driven insights to support every student, saving you time and enhancing your classroom.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding bg-slate-800/30">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                 <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Frequently Asked Questions</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-400">
+                        Have questions? We've got answers. If you can't find what you're looking for, feel free to contact us.
+                    </p>
+                </div>
+                <div class="mt-12 space-y-4" id="faq-container">
+                    <!-- FAQ Item 1 -->
+                    <div class="glass-card rounded-lg">
+                        <button class="faq-question flex justify-between items-center w-full p-6 text-left">
+                            <span class="text-lg font-semibold text-white">Who is Ignite Math for?</span>
+                            <i data-lucide="chevron-down" class="transition-transform text-slate-400"></i>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0">
+                            <p class="text-slate-400">Ignite Math is designed for a wide range of learners, from middle school students just starting with algebra to college students and adults looking to brush up on their skills. It's also a powerful tool for teachers to use in the classroom and for parents who want to support their children's education.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="glass-card rounded-lg">
+                        <button class="faq-question flex justify-between items-center w-full p-6 text-left">
+                            <span class="text-lg font-semibold text-white">What math subjects are covered?</span>
+                            <i data-lucide="chevron-down" class="transition-transform text-slate-400"></i>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0">
+                            <p class="text-slate-400">Currently, we cover Pre-Algebra, Algebra 1 & 2, Geometry, Trigonometry, and Pre-Calculus. We are constantly expanding our curriculum and plan to add Calculus and Statistics soon!</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="glass-card rounded-lg">
+                        <button class="faq-question flex justify-between items-center w-full p-6 text-left">
+                            <span class="text-lg font-semibold text-white">How does the AI personalization work?</span>
+                            <i data-lucide="chevron-down" class="transition-transform text-slate-400"></i>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0">
+                            <p class="text-slate-400">Our AI uses a sophisticated algorithm based on learning science. It analyzes your answers on the initial assessment and ongoing practice problems to build a "knowledge map" of your skills. It identifies concepts you've mastered, areas where you're struggling, and what you're ready to learn next. This allows the platform to serve you the right problem at the right time to maximize learning efficiency.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="glass-card rounded-lg">
+                        <button class="faq-question flex justify-between items-center w-full p-6 text-left">
+                            <span class="text-lg font-semibold text-white">Is it safe and private for my child to use?</span>
+                            <i data-lucide="chevron-down" class="transition-transform text-slate-400"></i>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0">
+                            <p class="text-slate-400">Absolutely. We take data privacy and security very seriously. All user data is encrypted, and we are fully compliant with child online privacy laws. We never sell or share personal data with third parties. You can learn more in our Privacy Policy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-4">
+                    <a href="#" class="flex items-center space-x-3">
+                        <div class="bg-gradient-to-br from-purple-500 to-blue-500 p-2 rounded-lg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span class="text-2xl font-bold text-white">Ignite Math</span>
+                    </a>
+                    <p class="mt-4 text-slate-400">The smartest way to learn math.</p>
+                    <div class="mt-6 flex space-x-4">
+                        <a href="#" class="text-slate-500 hover:text-white"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="text-slate-500 hover:text-white"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="text-slate-500 hover:text-white"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-500">Product</h3>
+                        <ul class="mt-4 space-y-3">
+                            <li><a href="#features" class="text-slate-400 hover:text-white">Features</a></li>
+                            <li><a href="#pricing" class="text-slate-400 hover:text-white">Pricing</a></li>
+                            <li><a href="#for-everyone" class="text-slate-400 hover:text-white">Who It's For</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-500">Company</h3>
+                        <ul class="mt-4 space-y-3">
+                            <li><a href="#" class="text-slate-400 hover:text-white">About Us</a></li>
+                            <li><a href="#" class="text-slate-400 hover:text-white">Careers</a></li>
+                            <li><a href="#" class="text-slate-400 hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-500">Resources</h3>
+                        <ul class="mt-4 space-y-3">
+                            <li><a href="#" class="text-slate-400 hover:text-white">Blog</a></li>
+                            <li><a href="#faq" class="text-slate-400 hover:text-white">FAQ</a></li>
+                            <li><a href="#" class="text-slate-400 hover:text-white">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-500">Legal</h3>
+                        <ul class="mt-4 space-y-3">
+                            <li><a href="#" class="text-slate-400 hover:text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-slate-400 hover:text-white">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-slate-800 pt-8 text-center text-slate-500">
+                <p>&copy; 2025 Ignite Math. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = mobileMenuButton.querySelector('i');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.contains('hidden');
+            menuIcon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+            lucide.createIcons();
+        });
+
+        // Close mobile menu when a link inside it is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // FAQ Accordion
+        const faqContainer = document.getElementById('faq-container');
+        if (faqContainer) {
+            faqContainer.addEventListener('click', (e) => {
+                const questionButton = e.target.closest('.faq-question');
+                if (!questionButton) return;
+
+                const answer = questionButton.parentElement.querySelector('.faq-answer');
+                const icon = questionButton.querySelector('i');
+                const isCurrentlyOpen = !answer.classList.contains('hidden');
+
+                // Close all items first
+                faqContainer.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.classList.add('hidden');
+                });
+                faqContainer.querySelectorAll('.faq-question i').forEach(icn => {
+                    icn.classList.remove('rotate-180');
+                });
+
+                // If the clicked item was not already open, open it.
+                if (!isCurrentlyOpen) {
+                    answer.classList.remove('hidden');
+                    if (icon) {
+                        icon.classList.add('rotate-180');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
