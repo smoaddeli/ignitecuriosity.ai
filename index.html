@@ -3,110 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ignite Curiosity Lab - Reimagining Learning with AI</title>
+    <title>Ignite Curiosity Lab - Learning, Reimagined.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Basic placeholder styles to make it readable */
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; background: #f8f9fa; color: #333; margin: 0; padding: 0; }
-        nav { background: #fff; padding: 1rem 2rem; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
-        nav a { text-decoration: none; color: #555; font-weight: 600; margin-left: 1.5rem; }
-        nav a.logo { font-size: 1.25rem; color: #000; margin-left: 0; }
-        .hero { text-align: center; padding: 5rem 2rem; background: #343a40; color: #fff; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; opacity: 0.9; }
-        .content-section { max-width: 900px; margin: 3rem auto; padding: 2rem; background: #fff; border-radius: 8px; }
-        .content-section h2 { font-size: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #007bff; padding-bottom: 0.5rem; }
-        .content-section h3 { font-size: 1rem; text-transform: uppercase; color: #888; letter-spacing: 1px; margin-bottom: 0.5rem; }
-        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
-        .feature-item h4 { font-size: 1.25rem; }
-        .final-quote { text-align: center; padding: 4rem 2rem; background: #007bff; color: #fff; }
-        .final-quote h2 { font-size: 1.75rem; max-width: 800px; margin: 0 auto; line-height: 1.5; }
-        footer { text-align: center; padding: 2rem; background: #343a40; color: #aaa; }
-        footer .footer-nav { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; }
-        footer .footer-nav a { color: #fff; text-decoration: none; }
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --dark-color: #212529;
+            --light-bg: #f8f9fa;
+            --white-color: #ffffff;
+            --border-color: #e9ecef;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--white-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--white-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            text-decoration: none;
+        }
+
+        nav .nav-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--dark-color);
+            color: var(--white-color);
+            text-align: center;
+            padding: 6rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.35rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .section:nth-of-type(even) {
+            background-color: var(--light-bg);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .section p {
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: #495057;
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            background-color: var(--white-color);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-item h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            font-size: 1rem;
+            margin: 0;
+            color: #555;
+            max-width: none; /* Override section p styling */
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--white-color);
+            color: var(--primary-color);
+            padding: 15px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--dark-color);
+            color: var(--white-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: #adb5bd;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: auto; /* Pushes footer to bottom */
+        }
+
+        footer .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-links a:hover {
+            color: var(--white-color);
+        }
+
+        footer p {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav .container {
+                flex-direction: column;
+            }
+            nav .nav-links {
+                margin-top: 15px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav .nav-links a {
+                margin: 0 10px 10px;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .section h2 {
+                font-size: 2rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-section h2 {
+                font-size: 2.2rem;
+            }
+        }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#top" class="logo"><strong>Ignite Curiosity Lab</strong></a>
-        <div>
-            <a href="#mission">Our Mission</a>
-            <a href="#approach">Our Approach</a>
-            <a href="#work">Our Work</a>
-            <a href="#contact">Contact</a>
+        <div class="container">
+            <a href="#" class="logo">Ignite Curiosity Lab</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#approach">Approach</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
     </nav>
 
     <header class="hero" id="top">
-        <h1>Reimagining Learning in an AI-Enabled World</h1>
-        <p>Ignite Curiosity Lab is a research-driven education technology startup with a product-innovation mandate, transforming K–12 education through innovative AI-powered learning solutions.</p>
+        <div class="container">
+            <h1>Learning, Reimagined.</h1>
+            <p>Ignite Curiosity Lab is a research-driven edtech startup exploring how AI can redefine human learning, creativity, and capability.</p>
+        </div>
     </header>
 
     <main>
-        <section id="mission" class="content-section">
-            <h3>Our Mission</h3>
-            <h2>Learning to think and collaborate with AI is a fundamental skill for the future.</h2>
-            <p>At the heart of our work is a simple belief: this skill is essential to developing curiosity, creativity, computational reasoning, and lifelong learning skills. Our mission is to empower students and teachers to become more capable, reflective, and inventive in an AI-enabled world, helping them learn, think, and create with AI, not just use it.</p>
-        </section>
-
-        <section id="approach" class="content-section" style="background: #f8f9fa;">
-            <h3>Our Approach</h3>
-            <h2>Designing New Learning Experiences</h2>
-            <p>We explore how AI can redefine human learning, teaching, and capability development, designing new learning experiences and product paradigms based on what we discover. Our approach focuses on skill development, agency, and cognitive growth, rather than optimizing engagement or efficiency alone.</p>
-            
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <h4>Human-Centered AI</h4>
-                    <p>We build AI-powered learning environments that help students develop not only academic mastery but also critical thinking, collaboration, and creative problem-solving skills.</p>
-                </div>
-                <div class="feature-item">
-                    <h4>Rooted in Research</h4>
-                    <p>This means integrating learning science principles and the latest advancements in generative AI with insights from educational research. We leverage AI as both a tool and a learning partner.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="work" class="content-section">
-            <h3>Our Work in Practice</h3>
-            <h2>At the Intersection of Research, Pedagogy, and Technology</h2>
-            <p>Our interdisciplinary team of educators, researchers, and engineers works side by side to build, test, and prototype new interaction models. Our approach blends educational research with hands-on innovation: every prototype, product, and classroom experiment advances our understanding of how humans and AI can learn together.</p>
-
-            <h4>Flagship Project: InsightAI Math</h4>
-            <p>Our flagship product, <strong>InsightAI Math</strong>, is an adaptive math learning platform powered by Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and dynamic content generation. It personalizes the learning experience while keeping teachers at the center, supporting them with research-backed tools that enhance reasoning, creativity, and conceptual understanding.</p>
-            
-            <p>These innovations—from helping teachers personalize instruction to enabling students to explore ideas through dialogue with AI—transform classrooms into environments of curiosity, exploration, and growth, reimagining what effective learning looks like in the 21st-century classroom.</p>
-        </section>
-
-        <section class="final-quote">
-            <h2>We’re not just building edtech tools; we’re designing and shaping a new way for humans and AI to learn, think, and grow together.</h2>
-        </section>
-
-        <section id="contact" class="content-section" style="text-align: center;">
-            <h3>Contact Us</h3>
-            <h2>Stay in Touch</h2>
-            <p>We are currently in stealth mode, but we'd love to hear from you. For research or partnership inquiries, please reach out.</p>
-            <a href="mailto:info@ignitecuriosity.ai" style="font-weight: 600; font-size: 1.1rem;">info@ignitecuriosity.ai</a>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="footer-nav">
-            <a href="#mission">Our Mission</a>
-            <a href="#approach">Our Approach</a>
-            <a href="#work">Our Work</a>
-            <a href="#">Careers</a>
-            <a href="#">Blog</a>
-            <a href="mailto:info@ignitecuriosity.ai">Contact</a>
-        </div>
-        <div class="footer-legal">
-            <p>© 2025 Ignite Curiosity Lab. All rights reserved.</p>
-            <p>
-                <a href="#" style="color: #aaa; margin: 0 0.5rem;">Privacy Policy</a> | 
-                <a href="#" style="color: #aaa; margin: 0 0.5rem;">Terms of Service</a>
-            </p>
-        </div>
-    </footer>
-
-</body>
-</html>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Beyond the Tool</h2>
+                <p>We believe learning to *think* and *create* with AI
