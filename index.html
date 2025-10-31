@@ -4,43 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ignite Curiosity Lab - Learning, Reimagined.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #007bff;
-            --secondary-color: #6c757d;
-            --dark-color: #212529;
-            --light-bg: #f8f9fa;
-            --white-color: #ffffff;
-            --border-color: #e9ecef;
+            /* Color Palette */
+            --bg-dark: #0f0f1a;      /* Deep dark blue/purple background */
+            --bg-medium: #1a1a2e;  /* Lighter dark for cards/sections */
+            --text-light: #e0e0f0;   /* Light lavender/white for body text */
+            --text-primary: #ffffff; /* Pure white for main headings */
+            --accent-blue: #00aaff;  /* Bright electric blue for accents */
+            --accent-hover: #0088cc; /* Darker blue for hover */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--dark-color);
-            background-color: var(--white-color);
-            margin: 0;
-            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 2rem;
         }
 
         /* Navigation */
         nav {
-            background-color: var(--white-color);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 0;
+            background-color: rgba(15, 15, 26, 0.8); /* Semi-transparent */
+            border-bottom: 1px solid #2a2a4a;
+            padding: 1.5rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
+            backdrop-filter: blur(10px); /* Frosted glass effect */
         }
 
         nav .container {
@@ -50,94 +60,100 @@
         }
 
         nav .logo {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: 700;
-            color: var(--dark-color);
+            color: var(--text-primary);
             text-decoration: none;
         }
 
         nav .nav-links a {
-            color: var(--secondary-color);
+            color: var(--text-light);
             text-decoration: none;
-            margin-left: 25px;
+            margin-left: 2.5rem;
             font-weight: 600;
             transition: color 0.3s ease;
         }
 
         nav .nav-links a:hover {
-            color: var(--primary-color);
+            color: var(--accent-blue);
         }
 
         /* Hero Section */
         .hero {
-            background-color: var(--dark-color);
-            color: var(--white-color);
             text-align: center;
-            padding: 6rem 0;
+            padding: 7rem 0;
+            background: linear-gradient(rgba(15, 15, 26, 0.9), rgba(15, 15, 26, 0.9)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070') center/cover no-repeat; /* Subtle tech background */
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             margin-bottom: 1rem;
-            line-height: 1.1;
+            line-height: 1.2;
             font-weight: 700;
+            color: var(--text-primary);
+            /* Subtle text glow */
+            text-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
         }
 
         .hero p {
-            font-size: 1.35rem;
+            font-size: 1.5rem;
             max-width: 700px;
             margin: 0 auto;
+            color: var(--text-light);
             opacity: 0.9;
         }
 
         /* Section Styling */
         .section {
-            padding: 4rem 0;
+            padding: 5rem 0;
             text-align: center;
         }
 
-        .section:nth-of-type(even) {
-            background-color: var(--light-bg);
+        /* Alternating background color for sections */
+        .section:nth-of-type(odd) {
+            background-color: var(--bg-medium);
         }
 
         .section h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 1.5rem;
             font-weight: 700;
+            color: var(--text-primary);
         }
 
-        .section p {
-            font-size: 1.15rem;
+        .section > .container > p {
+            font-size: 1.25rem;
             max-width: 800px;
-            margin: 0 auto 2rem;
-            color: #495057;
+            margin: 0 auto 3rem;
+            color: var(--text-light);
+            opacity: 0.9;
         }
 
         /* Feature Grid */
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
             margin-top: 3rem;
         }
 
         .feature-item {
-            background-color: var(--white-color);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            background-color: var(--bg-dark); /* Darker than the section bg */
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            border: 1px solid #2a2a4a;
             text-align: left;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .feature-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 170, 255, 0.15);
         }
 
         .feature-item h3 {
-            font-size: 1.5rem;
-            color: var(--primary-color);
+            font-size: 1.6rem;
+            color: var(--accent-blue);
             margin-bottom: 1rem;
             font-weight: 600;
         }
@@ -145,102 +161,112 @@
         .feature-item p {
             font-size: 1rem;
             margin: 0;
-            color: #555;
-            max-width: none; /* Override section p styling */
+            color: var(--text-light);
+            opacity: 0.9;
         }
 
         /* Call to Action */
         .cta-section {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            padding: 5rem 0;
+            /* Bright, eye-catching gradient */
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-hover));
+            color: var(--text-primary);
+            padding: 6rem 0;
             text-align: center;
         }
 
         .cta-section h2 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 1.5rem;
             font-weight: 700;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         .cta-section p {
             font-size: 1.3rem;
             max-width: 700px;
-            margin: 0 auto 2rem;
-            opacity: 0.9;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
         }
 
         .cta-button {
             display: inline-block;
-            background-color: var(--white-color);
-            color: var(--primary-color);
-            padding: 15px 35px;
-            border-radius: 5px;
+            background-color: var(--text-primary);
+            color: var(--accent-hover);
+            padding: 1rem 2.5rem;
+            border-radius: 50px; /* Pill shape */
             text-decoration: none;
             font-size: 1.1rem;
-            font-weight: 600;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: 700;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .cta-button:hover {
-            background-color: var(--dark-color);
-            color: var(--white-color);
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            transform: scale(1.05);
         }
 
         /* Footer */
         footer {
-            background-color: var(--dark-color);
-            color: #adb5bd;
+            background-color: var(--bg-dark);
+            color: #888;
             padding: 3rem 0;
             text-align: center;
-            margin-top: auto; /* Pushes footer to bottom */
+            margin-top: auto;
+            border-top: 1px solid #2a2a4a;
+        }
+
+        footer .footer-links {
+            margin-bottom: 1.5rem;
         }
 
         footer .footer-links a {
-            color: #adb5bd;
+            color: #aaa;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 1rem;
             font-weight: 400;
             transition: color 0.3s ease;
         }
 
         footer .footer-links a:hover {
-            color: var(--white-color);
+            color: var(--accent-blue);
         }
 
         footer p {
-            margin-top: 1.5rem;
             font-size: 0.9rem;
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            nav .container {
-                flex-direction: column;
-            }
-            nav .nav-links {
-                margin-top: 15px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            nav .nav-links a {
-                margin: 0 10px 10px;
-            }
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .hero p {
-                font-size: 1.1rem;
-            }
-            .section h2 {
-                font-size: 2rem;
-            }
+        @media (max-width: 900px) {
             .feature-grid {
                 grid-template-columns: 1fr;
             }
-            .cta-section h2 {
+        }
+        
+        @media (max-width: 768px) {
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav .nav-links {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            nav .nav-links a {
+                margin: 0 1rem;
+            }
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .hero p {
+                font-size: 1.25rem;
+            }
+            .section h2 {
                 font-size: 2.2rem;
+            }
+            .cta-section h2 {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -307,9 +333,8 @@
             <div class="footer-links">
                 <a href="#about">About</a>
                 <a href="#approach">Approach</a>
-                <a href="#contact">Contact</a>
+                <a href="mailto:info@ignitecuriosity.ai">Contact</a>
                 <a href="#">Privacy</a>
-                <a href="#">Terms</a>
             </div>
             <p>&copy; 2025 Ignite Curiosity Lab. All rights reserved.</p>
         </div>
